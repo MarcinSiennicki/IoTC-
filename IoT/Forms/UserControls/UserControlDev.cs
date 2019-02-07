@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IoT.Forms.UserControls
@@ -22,8 +15,7 @@ namespace IoT.Forms.UserControls
                     _instance = new UserControlDev();
                 return _instance;
             }
-            set
-            { }
+            set { _instance = value; }
 
         }
         public UserControlDev()
@@ -33,7 +25,7 @@ namespace IoT.Forms.UserControls
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            using (Form_Device fd = new Form_Device())
+            using (FormDevice fd = new FormDevice())
             {
                 fd.ShowDialog();
             }

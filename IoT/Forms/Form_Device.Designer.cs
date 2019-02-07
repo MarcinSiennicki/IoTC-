@@ -1,15 +1,16 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace IoT.Forms
 {
-    partial class Form_Device
+    partial class FormDevice
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -158,7 +159,7 @@ namespace IoT.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Device));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDevice));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -314,7 +315,7 @@ namespace IoT.Forms
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_Device";
+            this.Name = "FormDevice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Device";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -325,17 +326,17 @@ namespace IoT.Forms
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxPower;
-        private System.Windows.Forms.ComboBox comboBoxType;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonAddToDatabase;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Label label1;
+        private TextBox textBoxName;
+        private Label label2;
+        private TextBox textBoxPower;
+        private ComboBox comboBoxType;
+        private Label label3;
+        private PictureBox pictureBox1;
+        private Button buttonAddToDatabase;
     }
 }

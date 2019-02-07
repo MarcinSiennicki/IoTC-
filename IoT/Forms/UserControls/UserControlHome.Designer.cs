@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
-using System.Threading;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace IoT.Forms.UserControls
@@ -11,7 +11,7 @@ namespace IoT.Forms.UserControls
         /// <summary> 
         /// Wymagana zmienna projektanta.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary> 
         /// Wyczyść wszystkie używane zasoby.
@@ -188,61 +188,61 @@ namespace IoT.Forms.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxDevice = new System.Windows.Forms.ComboBox();
-            this.buttonSelect = new System.Windows.Forms.Button();
-            this.buttonSwitch = new System.Windows.Forms.Button();
+            this.comboBoxDevice = new ComboBox();
+            this.buttonSelect = new Button();
+            this.buttonSwitch = new Button();
             this.SuspendLayout();
             // 
             // comboBoxDevice
             // 
-            this.comboBoxDevice.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBoxDevice.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxDevice.FormattingEnabled = true;
-            this.comboBoxDevice.Location = new System.Drawing.Point(42, 36);
+            this.comboBoxDevice.Location = new Point(42, 36);
             this.comboBoxDevice.Name = "comboBoxDevice";
-            this.comboBoxDevice.Size = new System.Drawing.Size(233, 36);
+            this.comboBoxDevice.Size = new Size(233, 36);
             this.comboBoxDevice.TabIndex = 3;
             // 
             // buttonSelect
             // 
-            this.buttonSelect.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.buttonSelect.BackColor = Color.DarkSlateBlue;
             this.buttonSelect.FlatAppearance.BorderSize = 0;
-            this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelect.Font = new System.Drawing.Font("Verdana", 16.2F);
-            this.buttonSelect.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonSelect.Location = new System.Drawing.Point(300, 36);
+            this.buttonSelect.FlatStyle = FlatStyle.Flat;
+            this.buttonSelect.Font = new Font("Verdana", 16.2F);
+            this.buttonSelect.ForeColor = Color.LightGray;
+            this.buttonSelect.Location = new Point(300, 36);
             this.buttonSelect.Name = "buttonSelect";
-            this.buttonSelect.Size = new System.Drawing.Size(245, 57);
+            this.buttonSelect.Size = new Size(245, 57);
             this.buttonSelect.TabIndex = 6;
             this.buttonSelect.Text = "Select";
             this.buttonSelect.UseVisualStyleBackColor = false;
-            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
+            this.buttonSelect.Click += new EventHandler(this.buttonSelect_Click);
             // 
             // buttonSwitch
             // 
-            this.buttonSwitch.BackColor = System.Drawing.Color.Red;
+            this.buttonSwitch.BackColor = Color.Red;
             this.buttonSwitch.FlatAppearance.BorderSize = 0;
-            this.buttonSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSwitch.Font = new System.Drawing.Font("Verdana", 16.2F);
-            this.buttonSwitch.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonSwitch.Location = new System.Drawing.Point(616, 36);
+            this.buttonSwitch.FlatStyle = FlatStyle.Flat;
+            this.buttonSwitch.Font = new Font("Verdana", 16.2F);
+            this.buttonSwitch.ForeColor = Color.LightGray;
+            this.buttonSwitch.Location = new Point(616, 36);
             this.buttonSwitch.Name = "buttonSwitch";
-            this.buttonSwitch.Size = new System.Drawing.Size(245, 57);
+            this.buttonSwitch.Size = new Size(245, 57);
             this.buttonSwitch.TabIndex = 7;
             this.buttonSwitch.Text = "Off";
             this.buttonSwitch.UseVisualStyleBackColor = false;
             this.buttonSwitch.Visible = false;
-            this.buttonSwitch.Click += new System.EventHandler(this.Switch_Click);
+            this.buttonSwitch.Click += new EventHandler(this.Switch_Click);
             // 
             // UserControlHome
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = AutoScaleMode.None;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = Color.LightGray;
             this.Controls.Add(this.buttonSwitch);
             this.Controls.Add(this.buttonSelect);
             this.Controls.Add(this.comboBoxDevice);
             this.Name = "UserControlHome";
-            this.Size = new System.Drawing.Size(1350, 553);
+            this.Size = new Size(1350, 553);
             this.ResumeLayout(false);
 
         }

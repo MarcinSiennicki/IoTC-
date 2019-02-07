@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using IoT.Forms;
 
 namespace IoT
 {
@@ -19,19 +17,19 @@ namespace IoT
             Application.Run(new Form1());
         }
 
-        private static int globalCorrectUserId;
+        private static int _globalCorrectUserId;
 
         public static int GlobalCorrectUserId
         {
-            get { return globalCorrectUserId; }
-            set { globalCorrectUserId = value; }
+            get { return _globalCorrectUserId; }
+            set { _globalCorrectUserId = value; }
         }
 
-        private static int globalDeviceId;
+        private static int _globalDeviceId;
         public static int GlobalDeviceId
         {
-            get { return globalDeviceId; }
-            set { globalDeviceId = value; }
+            get { return _globalDeviceId; }
+            set { _globalDeviceId = value; }
         }
 
 

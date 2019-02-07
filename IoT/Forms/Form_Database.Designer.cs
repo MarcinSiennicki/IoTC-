@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.Common;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace IoT.Forms
 {
-    partial class Form_Database
+    partial class FormDatabase
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -75,7 +74,7 @@ namespace IoT.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Database));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDatabase));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -339,7 +338,7 @@ namespace IoT.Forms
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_Database";
+            this.Name = "FormDatabase";
             this.Text = "Age";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_Database_Load);
@@ -354,24 +353,24 @@ namespace IoT.Forms
 
     #endregion
 
-    private System.Windows.Forms.Panel panel1;
-    private System.Windows.Forms.Button buttonClose;
-    private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.PictureBox pictureBox1Icon;
-    private System.Windows.Forms.Label label6;
-    private System.Windows.Forms.PictureBox pictureBox2Icon;
-    private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.TextBox textBoxSurnameDB;
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.TextBox textBoxNameDB;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.TextBox textBoxLoginDB;
-    private System.Windows.Forms.Label label5;
-    private System.Windows.Forms.TextBox textBoxAgeDB;
-    private System.Windows.Forms.Label label7;
-    private System.Windows.Forms.TextBox textBoxEmailDB;
-    private System.Windows.Forms.Label label8;
-    private System.Windows.Forms.TextBox textBoxPasswordDB;
-    private System.Windows.Forms.Button buttonLogin;
+    private Panel panel1;
+    private Button buttonClose;
+    private Label label3;
+    private PictureBox pictureBox1Icon;
+    private Label label6;
+    private PictureBox pictureBox2Icon;
+    private Label label4;
+    private TextBox textBoxSurnameDB;
+    private Label label2;
+    private TextBox textBoxNameDB;
+    private Label label1;
+    private TextBox textBoxLoginDB;
+    private Label label5;
+    private TextBox textBoxAgeDB;
+    private Label label7;
+    private TextBox textBoxEmailDB;
+    private Label label8;
+    private TextBox textBoxPasswordDB;
+    private Button buttonLogin;
 }
 }

@@ -1,11 +1,15 @@
-﻿namespace IoT.Forms.UserControls
+﻿using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace IoT.Forms.UserControls
 {
     partial class UserControlSettings
     {
         /// <summary> 
         /// Wymagana zmienna projektanta.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary> 
         /// Wyczyść wszystkie używane zasoby.
@@ -32,11 +36,11 @@
             // 
             // UserControlSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.AutoScaleDimensions = new SizeF(8F, 16F);
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.BackColor = Color.LightGray;
             this.Name = "UserControlSettings";
-            this.Size = new System.Drawing.Size(1300, 150);
+            this.Size = new Size(1300, 150);
             this.ResumeLayout(false);
 
         }

@@ -1,11 +1,14 @@
-﻿namespace IoT.Forms
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace IoT.Forms
 {
-    partial class Form_mainBoard
+    partial class FormMainBoard
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -32,7 +35,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_mainBoard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainBoard));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonCost = new System.Windows.Forms.Button();
@@ -328,7 +331,7 @@
             this.Controls.Add(this.panelLeft);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_mainBoard";
+            this.Name = "FormMainBoard";
             this.Text = "Form_mainBoard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_mainBoard_Load);
@@ -347,25 +350,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button buttonHome;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonDevice;
-        private System.Windows.Forms.Panel panelSidePanel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonSettings;
-        private System.Windows.Forms.Button buttonCost;
-        private System.Windows.Forms.Button buttonChart;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Button buttonMenu;
-        private System.Windows.Forms.Label labelTime;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timerTime;
-        private System.Windows.Forms.Label labelDate;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelCentre;
+        private Panel panelLeft;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Button buttonHome;
+        private PictureBox pictureBox1;
+        private Button buttonDevice;
+        private Panel panelSidePanel;
+        private Label label3;
+        private Button buttonSettings;
+        private Button buttonCost;
+        private Button buttonChart;
+        private Button buttonClose;
+        private Button buttonMenu;
+        private Label labelTime;
+        private Timer timer1;
+        private Timer timerTime;
+        private Label labelDate;
+        private Panel panel1;
+        private Panel panelCentre;
     }
 }

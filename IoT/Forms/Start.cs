@@ -1,16 +1,7 @@
-﻿using IoT.Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
-namespace IoT
+namespace IoT.Forms
 {
     public partial class Form1 : Form
     {
@@ -22,7 +13,7 @@ namespace IoT
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -34,7 +25,7 @@ namespace IoT
 
         private void buttonAddDB_Click(object sender, EventArgs e)
         {
-            using (Form_Database dB = new Form_Database())
+            using (FormDatabase dB = new FormDatabase())
             {
                 dB.ShowDialog();
             }

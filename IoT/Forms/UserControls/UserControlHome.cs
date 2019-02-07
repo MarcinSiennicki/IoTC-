@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Threading;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace IoT.Forms.UserControls
 {
@@ -25,8 +20,7 @@ namespace IoT.Forms.UserControls
                     _instance = new UserControlHome();
                 return _instance;
             }
-            set
-            { }
+            set { _instance = value; }
 
         }
 
@@ -51,12 +45,12 @@ namespace IoT.Forms.UserControls
 
 
        
-                Dictionary<int, double> DeviceList = new Dictionary<int, double>();
+                Dictionary<int, double> deviceList = new Dictionary<int, double>();
                 string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\source\\repos\\IoT\\IoT\\IoT.mdf;Integrated Security=True";
-                string Query = "SELECT DeviceId,Power from DeviceDB Where CustomerId=" + Program.GlobalCorrectUserId + ";";
+                string query = "SELECT DeviceId,Power from DeviceDB Where CustomerId=" + Program.GlobalCorrectUserId + ";";
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = connString;
-                SqlCommand command = new SqlCommand(Query, conn);
+                SqlCommand command = new SqlCommand(query, conn);
                 SqlDataReader reader;
                 int numberOfDevice = 0;
                
@@ -71,12 +65,12 @@ namespace IoT.Forms.UserControls
                         numberOfDevice++;
                       
 
-                           int DeviceState = selectDeviceState(reader.GetInt32(0));
+                           int deviceState = selectDeviceState(reader.GetInt32(0));
 
-                          if (DeviceState == 1)
-                                DeviceList.Add(reader.GetInt32(0), reader.GetDouble(1));
+                          if (deviceState == 1)
+                                deviceList.Add(reader.GetInt32(0), reader.GetDouble(1));
                                else
-                           DeviceList.Add(reader.GetInt32(0), 0);
+                           deviceList.Add(reader.GetInt32(0), 0);
 
                     }
 
@@ -87,20 +81,21 @@ namespace IoT.Forms.UserControls
                 }
                 try
                 {
-                    Thread measurement = new Thread(() =>
+                    void Start()
                     {
                         while (true)
                         {
-                            foreach (var element in DeviceList)
+                            foreach (var element in deviceList)
                             {
-
                                 insertData(Program.GlobalCorrectUserId, element.Key, element.Value);
 
-                                if (numberOfDevice != 0)
-                                    Thread.Sleep(new TimeSpan(0, 0, 10 / numberOfDevice));
+                                if (numberOfDevice != 0) Thread.Sleep(new TimeSpan(0, 0, 10 / numberOfDevice));
                             }
                         }
-                    });
+                        // ReSharper disable once FunctionNeverReturns
+                    }
+
+                    Thread measurement = new Thread(Start);
 
 
                     measurement.Start();
@@ -115,7 +110,7 @@ namespace IoT.Forms.UserControls
 
 
         }
-        public void  changingBackground()
+        public void  ChangingBackground()
         {
 
             if (buttonSwitch.Text == "Off")
@@ -137,8 +132,8 @@ namespace IoT.Forms.UserControls
         {
             if (comboBoxDevice.Text != "")
             {
-                int DeviceId = loadDeviceId();
-                int DeviceState = selectDeviceState(DeviceId);
+                int deviceId = loadDeviceId();
+                int DeviceState = selectDeviceState(deviceId);
                 if (DeviceState == 1)
                 {
                     buttonSwitch.Visible = true;
@@ -154,25 +149,25 @@ namespace IoT.Forms.UserControls
                 }
 
                 else
-                    MessageBox.Show("Error");
+                    MessageBox.Show(@"Error");
             }
             else
-                MessageBox.Show("Select Device");
+                MessageBox.Show(@"Select Device");
 
         }
 
         private void Switch_Click(object sender, EventArgs e)
         {
-            changingBackground();
-            int DeviceId = loadDeviceId();
+            ChangingBackground();
+            int deviceId = loadDeviceId();
             
-            int DeviceState = selectDeviceState(DeviceId);
-            if (DeviceState == 1)
-                updateDeviceState(DeviceId, 0);
-            else if (DeviceState == 0)
-                updateDeviceState(DeviceId, 1);
+            int deviceState = selectDeviceState(deviceId);
+            if (deviceState == 1)
+                updateDeviceState(deviceId, 0);
+            else if (deviceState == 0)
+                updateDeviceState(deviceId, 1);
             else
-                MessageBox.Show("Error");
+                MessageBox.Show(@"Error");
 
         }
 

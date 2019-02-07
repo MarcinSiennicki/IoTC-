@@ -1,24 +1,17 @@
-﻿using IoT.Forms.UserControls;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using IoT.Forms.UserControls;
 
 namespace IoT.Forms
 {
    
 
-    public partial class Form_mainBoard : Form
+    public partial class FormMainBoard : Form
     {
 
 
     
-        public Form_mainBoard()
+        public FormMainBoard()
         {
           
             InitializeComponent();
@@ -37,22 +30,15 @@ namespace IoT.Forms
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
-       
 
-        private void AddControlsToPanel(Control c)
-        {
-            c.Dock = DockStyle.Fill;
-            panelCentre.Controls.Clear();
-            panelCentre.Controls.Add(c);
-        }
         private void buttonMenu_Click(object sender, EventArgs e)
         {
             timer1.Start();
         }
-        private void moveSidePanel(Control msp)
+        private void MoveSidePanel(Control msp)
         {
             panelSidePanel.Top = msp.Top;
             panelSidePanel.Height = msp.Height;
@@ -60,7 +46,7 @@ namespace IoT.Forms
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            moveSidePanel(buttonHome);
+            MoveSidePanel(buttonHome);
 
             if(!panelCentre.Controls.Contains(UserControlHome.Instance))
             {
@@ -75,7 +61,7 @@ namespace IoT.Forms
 
         private void buttonDevice_Click(object sender, EventArgs e)
         {
-            moveSidePanel(buttonDevice);
+            MoveSidePanel(buttonDevice);
 
             if (!panelCentre.Controls.Contains(UserControlDev.Instance))
             {
@@ -89,7 +75,7 @@ namespace IoT.Forms
 
         private void buttonChart_Click(object sender, EventArgs e)
         {
-            moveSidePanel(buttonChart);
+            MoveSidePanel(buttonChart);
 
             if (!panelCentre.Controls.Contains(UserControlChart.Instance))
             {
@@ -103,7 +89,7 @@ namespace IoT.Forms
 
         private void buttonCost_Click(object sender, EventArgs e)
         {
-            moveSidePanel(buttonCost);
+            MoveSidePanel(buttonCost);
 
             if (!panelCentre.Controls.Contains(UserControlCost.Instance))
             {
@@ -117,7 +103,7 @@ namespace IoT.Forms
 
         private void buttonSettings_Click(object sender, EventArgs e)
         {
-            moveSidePanel(buttonSettings);
+            MoveSidePanel(buttonSettings);
 
             if (!panelCentre.Controls.Contains(UserControlSettings.Instance))
             {
@@ -139,11 +125,6 @@ namespace IoT.Forms
 
 
         private void Form_mainBoard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
         {
 
         }
